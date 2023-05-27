@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+         <meta charset="utf-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0">
+         <title>Media de nota</title>
+         <link rel="stylesheet" type="text/css" href="estilo.css">
+    </head>
+    <body>
+        <header>
+            <h1>Calcule sua média</h1>
+        </header>
+        
+        <section class="conteiner">
+            <h2>Digite 3 notas nos campos a baixo</h2>
+            <form method="post" action="registroalunos.php">
+                        
+                <label for="nota1">Nota 1</label><br>
+                <input type="number" id="nota1" name="nota1">
+                <label for="nota2">Nota 2</label><br>
+                <input type="number" id="nota2" name="nota2">
+                <label for="nota3">Nota 3</label><br>
+                <input type="number" id="nota3" name="nota3">
+                <label for="nomealuno">Aluno</label>
+                <input type="string" id="nomealuno" name="nomealuno">
+                <label for="materia">Matéria</label>
+                <input id="materia" name="materia">
+                <input class="submit" type="submit" name="submit" value="registrar"> 
+                <input class="apagar" type="reset" name="apagar" value="Apagar">
+            </form>
+                <button onclick="result()">Calcular</button><br>
+                <a href="consulta.html">Consultar dados do aluno</a>                                          
+                <br><br>
+                <p>Sua média é: <span></span></p>
+            
+                    <script type="text/javascript">
+                    
+                    const resultado = document.querySelector('span');
+                                
+                    function result() {
+                        const nota1 = document.querySelector('#nota1').value;
+                        const nota2 = document.querySelector('#nota2').value;
+                        const nota3 = document.querySelector('#nota3').value;
+                        const num1 = Number(nota1);
+                        const num2 = Number(nota2);
+                        const num3 = Number(nota3);
+                        let resul = (num1+num2+num3)/3;
+                        let total = resul.toFixed(1);
+                        if (resul<7) {
+                            resultado.innerHTML = total+"<br>Melhore suas notas, senão reprovará.";
+                        }else {
+                            resultado.innerHTML = total+"<br>Você está com uma média boa, continue assim.";
+                        }
+                        
+                    }            
+                </script>
+            
+       </section>
+    
+       <footer>
+        <h3>Contato: matheus.beck19@gmail.com</h3>
+       </footer>
+
+
+    </body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                    background-color: #f2f2f2;
+                }
+                
+                div {
+                    background-color: #fff;
+                    border-radius: 5px;
+                    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                    padding: 20px;
+                    width: 300px;
+                    margin: 0 auto;
+                    margin-top: 100px;
+                }
+                
+                form {
+                    display: flex;
+                    flex-direction: column;
+                }
+                
+                label {
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                    margin-left: 90px;
+                }
+                
+                input[type="text"] {
+                    padding: 8px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    margin-bottom: 10px;
+                }
+                
+                input[type="submit"] {
+                    margin-top: 10px;
+                    background-color: steelblue;
+                    color: #fff;
+                    border: none;
+                    padding: 10px 15px;
+                    cursor: pointer;
+                }
+                
+                input[type="submit"]:hover {
+                    background-color: #4682b4;
+                }
+            </style>
+        
+    </head>
+    <body>
+        <div>
+            <form method="post" action="consulta.php">
+                <Label for="aluno">Nome do aluno</Label><br>
+                <input name="aluno" id="aluno">
+                <input type="submit" value="Pesquisar">
+            </form>
+        </div>
+    </body>
+    </html>
